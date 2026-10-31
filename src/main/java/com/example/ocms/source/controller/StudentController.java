@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.ocms.source.io.EnrollmentResponseDto;
+import com.example.ocms.source.io.ResponseMapper;
 import com.example.ocms.source.service.AuthService;
 import com.example.ocms.source.service.PlatformService;
 
@@ -18,7 +20,7 @@ public class StudentController {
     private PlatformService platform;
 
     @GetMapping("/enrollments")
-    public Object mine(@RequestHeader("Authorization") String t) {
-        return platform.myEnrollments(auth.current(t));
+    public java.util.List<EnrollmentResponseDto> mine(@RequestHeader("Authorization") String t) {
+        return platform.myEnrollments(auth.current(t)).stream().map(ResponseMapper::enrollment).toList();
     }
 }

@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.ocms.source.io.CourseDto;
+import com.example.ocms.source.io.CourseResponseDto;
+import com.example.ocms.source.io.EnrollmentResponseDto;
+import com.example.ocms.source.io.ResponseMapper;
+import com.example.ocms.source.io.UserResponseDto;
 import com.example.ocms.source.service.AuthService;
 import com.example.ocms.source.service.PlatformService;
 
@@ -29,9 +33,9 @@ public class AdminController {
     }
 
     @GetMapping("/instructors/pending")
-    public Object pending(@RequestHeader("Authorization") String t) {
+    public java.util.List<UserResponseDto> pending(@RequestHeader("Authorization") String t) {
         admin(t);
-        return platform.pending();
+        return platform.pending().stream().map(ResponseMapper::user).toList();
     }
 
     @PutMapping("/instructors/{id}/verify")
@@ -42,15 +46,15 @@ public class AdminController {
     }
 
     @GetMapping("/courses/{id}/enrollments")
-    public Object enrollments(@RequestHeader("Authorization") String t, @PathVariable Long id) {
+    public java.util.List<EnrollmentResponseDto> enrollments(@RequestHeader("Authorization") String t, @PathVariable Long id) {
         admin(t);
-        return platform.enrollments(id);
+        return platform.enrollments(id).stream().map(ResponseMapper::enrollment).toList();
     }
 
     @PostMapping("/courses")
-    public Object createCourse(@RequestHeader("Authorization") String t, @RequestBody CourseDto d,
+    public CourseResponseDto createCourse(@RequestHeader("Authorization") String t, @RequestBody CourseDto d,
             @RequestParam(required = false) Long instructorId) {
         admin(t);
-        return platform.createForAdmin(d, instructorId);
+        return ResponseMapper.course(platform.createForAdmin(d, instructorId));
     }
 }

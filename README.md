@@ -1,27 +1,24 @@
-# Online Course Management System
+Online Course Management System
 
 ## Configuration
 
-
 ## Problem Statement
+
 <img src="./images/problemStatement.png" alt="Problem Statement">
 
-
 ## DataBase Schema
+
 <img src="./images/ocms.png" alt="DataBase schema">
 
-
-
 ### Run command : `./mvnw spring-boot:run -Dspring-boot.run.arguments="--server.port=8081"`
-
 
 The application uses MySQL database `ocms` on `localhost:3306` with user
 `root` and password `4545`. Hibernate creates or updates the schema. On
 startup, an administrator is created if one does not already exist:
 
 ```text
-email: admin@ocms.local
-password: pass123
+email: admin@ocms.com
+password: password
 ```
 
 Spring Security is configured with CSRF, form login, and HTTP basic disabled.
