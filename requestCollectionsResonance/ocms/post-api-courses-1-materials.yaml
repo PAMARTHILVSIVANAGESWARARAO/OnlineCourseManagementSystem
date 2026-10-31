@@ -1,0 +1,19 @@
+resonanceFormat: 2
+id: 6f860d2d-9741-4c49-9760-78f96d522d3b
+name: POST /api/courses/1/materials
+seq: 130
+method: POST
+path: http://localhost:8081/api/courses/1/materials
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+      Authorization:
+        example: Bearer <<instructorToken>>
+  requestBody:
+    example: |-
+      {
+        "title": "Interfaces video",
+        "link": "https://example.com/material"
+      }

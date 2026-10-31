@@ -1,0 +1,23 @@
+resonanceFormat: 2
+id: aeed42f9-8307-4620-ba1d-9dbfb32d2623
+name: POST /api/admin/courses
+seq: 200
+method: POST
+path: http://localhost:8081/api/admin/courses?instructorId=7
+spec:
+  parameters:
+    query:
+      instructorId:
+        example: '7'
+    header:
+      Content-Type:
+        example: application/json
+      Authorization:
+        example: Bearer <<adminToken>>
+  requestBody:
+    example: |-
+      {
+        "title": "Microservices with Spring",
+        "description": "Build microservices",
+        "category": "Backend Development"
+      }

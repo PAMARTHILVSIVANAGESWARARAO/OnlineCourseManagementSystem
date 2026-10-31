@@ -1,0 +1,33 @@
+resonanceFormat: 2
+id: 13538bfa-bee9-4cd2-ac55-364e6ee7599d
+name: Admin Login
+seq: 10
+method: POST
+path: /api/auth/login
+url: http://localhost:8081/api/auth/login
+auth:
+  type: inherit
+  config: {}
+params:
+  headers:
+  - key: Content-Type
+    value: application/json
+    enabled: true
+body:
+  mode: json
+  content: |-
+    {
+      "email": "admin@ocms.com",
+      "password": "password"
+    }
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+  requestBody:
+    example: |-
+      {
+        "email": "admin@ocms.local",
+        "password": "pass123"
+      }

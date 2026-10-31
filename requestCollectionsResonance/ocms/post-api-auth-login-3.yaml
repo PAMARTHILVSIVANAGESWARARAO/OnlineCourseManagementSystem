@@ -1,0 +1,24 @@
+resonanceFormat: 2
+id: de5ce5d4-a1c6-4f7b-a828-d3490705e34d
+name: POST /api/auth/login (3)
+seq: 30
+method: POST
+path: http://localhost:8081/api/auth/login
+body:
+  mode: json
+  content: |-
+    {
+      "email": "anusha.devi@gmail.com",
+      "password": "1234"
+    }
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+  requestBody:
+    example: |-
+      {
+        "email": "anusha.devi@gmail.com",
+        "password": "1234"
+      }

@@ -1,0 +1,20 @@
+resonanceFormat: 2
+id: ec6b92ad-71ef-42f8-9df6-095adc9adbc6
+name: POST /api/admin/courses (2)
+seq: 210
+method: POST
+path: http://localhost:8081/api/admin/courses
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+      Authorization:
+        example: Bearer <<adminToken>>
+  requestBody:
+    example: |-
+      {
+        "title": "Docker Basics",
+        "description": "Containers",
+        "category": "DevOps"
+      }

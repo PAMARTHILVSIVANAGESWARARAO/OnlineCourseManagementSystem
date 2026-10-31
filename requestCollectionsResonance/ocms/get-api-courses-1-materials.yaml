@@ -1,0 +1,11 @@
+resonanceFormat: 2
+id: b6fdc315-627d-4926-b967-2adb7d428935
+name: GET /api/courses/1/materials
+seq: 110
+method: GET
+path: http://localhost:8081/api/courses/1/materials
+spec:
+  parameters:
+    header:
+      Authorization:
+        example: Bearer <<studentToken>>

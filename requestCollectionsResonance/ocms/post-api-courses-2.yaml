@@ -1,0 +1,18 @@
+resonanceFormat: 2
+id: 1fb5dd5f-142e-49c1-912b-2957d2dc79c7
+name: POST /api/courses (2)
+seq: 100
+method: POST
+path: http://localhost:8081/api/courses
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+  requestBody:
+    example: |-
+      {
+        "title": "X",
+        "description": "Y",
+        "category": "Z"
+      }

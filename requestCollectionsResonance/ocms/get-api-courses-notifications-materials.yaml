@@ -1,0 +1,6 @@
+resonanceFormat: 2
+id: be8dfa7c-6219-443f-85c1-714468192f43
+name: GET /api/courses/notifications/materials
+seq: 160
+method: GET
+path: http://localhost:8081/api/courses/notifications/materials

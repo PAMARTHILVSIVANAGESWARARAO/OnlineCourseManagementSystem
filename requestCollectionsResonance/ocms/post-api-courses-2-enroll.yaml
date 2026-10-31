@@ -1,0 +1,11 @@
+resonanceFormat: 2
+id: 3ba58216-f666-4fe3-bf5e-2e6178f73943
+name: POST /api/courses/2/enroll
+seq: 220
+method: POST
+path: http://localhost:8081/api/courses/2/enroll
+spec:
+  parameters:
+    header:
+      Authorization:
+        example: Bearer <<studentToken>>

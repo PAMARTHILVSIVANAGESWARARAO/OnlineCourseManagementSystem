@@ -1,0 +1,11 @@
+resonanceFormat: 2
+id: 789fedf8-df31-4a22-befe-052c76266233
+name: PUT /api/admin/instructors/12/verify
+seq: 180
+method: PUT
+path: http://localhost:8081/api/admin/instructors/12/verify
+spec:
+  parameters:
+    header:
+      Authorization:
+        example: Bearer <<adminToken>>

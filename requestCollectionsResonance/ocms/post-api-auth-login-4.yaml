@@ -1,0 +1,24 @@
+resonanceFormat: 2
+id: 1673f3d1-547e-4921-8049-f7cb373092f6
+name: POST /api/auth/login (4)
+seq: 60
+method: POST
+path: http://localhost:8081/api/auth/login
+body:
+  mode: json
+  content: |-
+    {
+      "email": "admin@ocms.local",
+      "password": "wrong"
+    }
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+  requestBody:
+    example: |-
+      {
+        "email": "admin@ocms.local",
+        "password": "wrong"
+      }

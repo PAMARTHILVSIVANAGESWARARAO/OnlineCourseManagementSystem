@@ -1,0 +1,20 @@
+resonanceFormat: 2
+id: 9cafc95d-9cdc-473a-be59-61254ee10d8f
+name: POST /api/courses
+seq: 90
+method: POST
+path: http://localhost:8081/api/courses
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+      Authorization:
+        example: Bearer <<adminToken>>
+  requestBody:
+    example: |-
+      {
+        "title": "Java Fundamentals Advanced",
+        "description": "Core Java",
+        "category": "Programming"
+      }

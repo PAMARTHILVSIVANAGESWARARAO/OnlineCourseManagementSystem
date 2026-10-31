@@ -1,0 +1,24 @@
+resonanceFormat: 2
+id: f9eef129-339e-48a9-8aa6-84a4975d55f8
+name: POST /api/auth/login (2)
+seq: 20
+method: POST
+path: http://localhost:8081/api/auth/login
+body:
+  mode: json
+  content: |-
+    {
+      "email": "sai.kiran@gmail.com",
+      "password": "1234"
+    }
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+  requestBody:
+    example: |-
+      {
+        "email": "sai.kiran@gmail.com",
+        "password": "1234"
+      }

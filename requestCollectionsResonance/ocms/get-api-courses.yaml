@@ -1,0 +1,15 @@
+resonanceFormat: 2
+id: 4384049c-951f-49d9-88cc-bd0f803dda3f
+name: GET /api/courses
+seq: 70
+method: GET
+path: /api/courses
+url: http://localhost:8081/api/courses
+auth:
+  type: inherit
+  config: {}
+params:
+  headers:
+  - key: Content-Type
+    value: application/json
+    enabled: true

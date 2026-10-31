@@ -1,0 +1,6 @@
+resonanceFormat: 2
+id: 1b50dd50-5407-4352-8d77-6fae5840f7ce
+name: GET /api/courses/notifications/new
+seq: 150
+method: GET
+path: http://localhost:8081/api/courses/notifications/new

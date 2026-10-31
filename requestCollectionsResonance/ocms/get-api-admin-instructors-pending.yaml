@@ -1,0 +1,11 @@
+resonanceFormat: 2
+id: 0ded89f5-c3ab-4565-a955-5c05cebbc2bb
+name: GET /api/admin/instructors/pending
+seq: 170
+method: GET
+path: http://localhost:8081/api/admin/instructors/pending
+spec:
+  parameters:
+    header:
+      Authorization:
+        example: Bearer <<adminToken>>

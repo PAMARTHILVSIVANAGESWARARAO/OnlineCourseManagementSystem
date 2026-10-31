@@ -1,0 +1,11 @@
+resonanceFormat: 2
+id: b0634af7-ebdf-42d2-a8d5-ee06523d264a
+name: GET /api/courses (2)
+seq: 80
+method: GET
+path: http://localhost:8081/api/courses?search=java
+spec:
+  parameters:
+    query:
+      search:
+        example: java

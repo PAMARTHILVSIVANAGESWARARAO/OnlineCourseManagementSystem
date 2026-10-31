@@ -1,0 +1,26 @@
+resonanceFormat: 2
+id: 1b68757a-8536-453f-a13a-1f403a20f27a
+name: POST /api/auth/register (2)
+seq: 50
+method: POST
+path: http://localhost:8081/api/auth/register
+body:
+  mode: json
+  content: |-
+    {
+      "email": "newinstructor@example.com",
+      "password": "secret",
+      "role": "INSTRUCTOR"
+    }
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+  requestBody:
+    example: |-
+      {
+        "email": "newinstructor@example.com",
+        "password": "secret",
+        "role": "INSTRUCTOR"
+      }

@@ -1,0 +1,19 @@
+resonanceFormat: 2
+id: cf2226b7-daac-47b6-8d64-48799fcada2a
+name: POST /api/courses/1/materials (2)
+seq: 140
+method: POST
+path: http://localhost:8081/api/courses/1/materials
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+      Authorization:
+        example: Bearer <<studentToken>>
+  requestBody:
+    example: |-
+      {
+        "title": "Hack",
+        "link": "https://example.com"
+      }

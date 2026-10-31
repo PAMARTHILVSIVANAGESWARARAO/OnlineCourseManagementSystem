@@ -1,0 +1,18 @@
+resonanceFormat: 2
+id: b62d577a-c7a2-4453-90fc-ff31eaa1576d
+name: PUT /api/courses/1/progress
+seq: 230
+method: PUT
+path: http://localhost:8081/api/courses/1/progress
+spec:
+  parameters:
+    header:
+      Content-Type:
+        example: application/json
+      Authorization:
+        example: Bearer <<studentToken>>
+  requestBody:
+    example: |-
+      {
+        "progress": 75
+      }

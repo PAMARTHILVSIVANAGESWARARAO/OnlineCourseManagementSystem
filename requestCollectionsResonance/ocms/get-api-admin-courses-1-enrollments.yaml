@@ -1,0 +1,11 @@
+resonanceFormat: 2
+id: 241f955c-3d4b-4cf5-a29f-d6118c0ffd86
+name: GET /api/admin/courses/1/enrollments
+seq: 190
+method: GET
+path: http://localhost:8081/api/admin/courses/1/enrollments
+spec:
+  parameters:
+    header:
+      Authorization:
+        example: Bearer <<adminToken>>

@@ -1,0 +1,11 @@
+resonanceFormat: 2
+id: 8584abf2-a0bf-4986-9535-2bd1f57708fd
+name: GET /api/student/enrollments
+seq: 250
+method: GET
+path: http://localhost:8081/api/student/enrollments
+spec:
+  parameters:
+    header:
+      Authorization:
+        example: Bearer <<studentToken>>
